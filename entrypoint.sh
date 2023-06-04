@@ -36,6 +36,13 @@ fi
 # Subtract the current UNIX timestamp from the UNIX timestamp of the
 # latest committer date and divide by 86400 to get the number of interval days.
 time_elapsed=$(( ($(date +%s) - $(git log -1 --format=%ct)) / 86400 ))
+last_name=$(git log --pretty=format:'%aN' -1)
+last_email=$(git log --pretty=format:'%aE' -1)
+last_files=$(git log --name-only --pretty=format:'' -1)
+
+if [ "${last_name}" == "${name}" ] && [ "${last_email}" == "${email}" ] && [ -z "${last_files}" ]; then
+git reset --mixed ${branch}~1
+fi
 
 # If the number of days between is greater than or equal to the
 # number of input days, create a new commit. Otherwise nothing to do.
