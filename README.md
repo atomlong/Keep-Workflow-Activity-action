@@ -63,10 +63,9 @@ All inputs are optional.
 | `email`   | Email address used for commit.                               | `41898282+github-actions[bot]@users.noreply.github.com` |
 | `message` | Commit message for the repository.                           | `chore: empty commit`                                   |
 | `days`    | Number of days between the latest commit and the new commit. | `50`                                                    |
-| `push`    | Whether to push a new commit.                                | `true`                                                  |
 
 ## Inputs
 
-| Input     | Description                                                  | Default                                                 |
-| --------- | ------------------------------------------------------------ | ------------------------------------------------------- |
-| `activated` | If the current git repository is activated, then output true. | `github-actions[bot]`                                |
+| Input     | Description                                                  |
+| --------- | ------------------------------------------------------------ |
+| `activated` | If the current git repository is activated, then output true. |

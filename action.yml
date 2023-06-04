@@ -13,7 +13,7 @@ inputs:
   message:
     description: 'Commit message for the repository.'
     required: false
-    default: 'An empty commit, used to activate the scheduled workflow.'
+    default: 'An empty commit used to activate the scheduled workflow.'
   days:
     description: 'Number of days between the latest commit and the new commit.'
     required: false
